@@ -29,7 +29,9 @@ passwd : test
 웹 사이트 프로토타입으로 영상 업로드 탭에는 crash가 없는 블랙박스 영상이 예시로 들어가 있습니다. 
 
 ![crash 없는 경우](https://user-images.githubusercontent.com/71022583/206725036-b1cc66b8-1f39-4832-ac9e-a0282633c74b.gif)
-
+crash가 없는 경우
+<br>
 ![crash 있는 경우](https://user-images.githubusercontent.com/71022583/206725073-c5ab7f3e-ca7b-4471-a567-0d0efde13584.gif)
+crash가 있는 경우
 
 (* 해당 이미지는 프로토타입이기 때문에 임의의 예시 영상을 이용한 것이기 때문에 실제와 다를 수 있다.)
