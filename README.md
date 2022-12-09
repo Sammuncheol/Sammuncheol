@@ -10,11 +10,9 @@
 crash_normal_classification.ipynb : google colab<br>
 prototype : aws ec2 ubuntu server
 
-![ezgif-4-15afba9afc](https://user-images.githubusercontent.com/108507011/206701992-1e5e2279-a842-4e98-a1a7-9b7e9979048f.gif)
-
-
-## 구현 참고 자료
-R-CNN video classification: https://github.com/ddioni/keras-io/blob/master/examples/vision/video_classification.py
+```
+flask run --host=0.0.0.0
+```
 
 
 ## 1차 프로토타입
@@ -35,3 +33,13 @@ crash가 없는 경우
 crash가 있는 경우
 
 (* 해당 이미지는 프로토타입이기 때문에 임의의 예시 영상을 이용한 것이기 때문에 실제와 다를 수 있다)
+
+
+## 영상 분류
+
+![ezgif-4-15afba9afc](https://user-images.githubusercontent.com/108507011/206701992-1e5e2279-a842-4e98-a1a7-9b7e9979048f.gif)
+
+
+## 구현 참고 자료
+R-CNN video classification: https://github.com/ddioni/keras-io/blob/master/examples/vision/video_classification.py
+
