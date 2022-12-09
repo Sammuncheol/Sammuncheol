@@ -11,6 +11,7 @@ crash_normal_classification.ipynb : google colab<br>
 prototype : aws ec2 ubuntu server
 
 ```
+# 서버에 prototype 폴더 내 app.py가 있는 위치에서 다음을 실행한다
 flask run --host=0.0.0.0
 ```
 
