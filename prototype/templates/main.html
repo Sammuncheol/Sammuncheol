@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=500">
+	<title>사고 과실 비율 분석</title>
+</head>
+<body>
+	<header style="width:50%; margin: auto; padding-top:30px; text-align: center;">
+	<h1 style="background-color: green;">사고 과실 비율 분석해드립니다.</h1>
+	</header>
+	<main>
+	<div style="width:50%; margin:auto; display:grid; grid-template-columns: 70% 30%; grid-template-rows: 500px; gap:20px;">
+		<div class="temp-box" style="background-color:gray; text-align: center;">
+		<h3 style="text-align:left;">영상 제출</h3>
+		<form method="POST" action="/upload" enctype="multipart/form-data">
+		<br><br><br><br><input type="file" name="file"><br><br><br><br><br><br>
+		<input type="submit" value="Upload">
+		</form>
+		</div>
+		<div class="temp-box box-two">
+			<div class="temp-box" style="height:60%;">회원정보</div>
+			<div class="temp-box" style="height:40%;">제출한 영상 확인</div>
+		</div>
+	</div>
+	<div style="width:50%; margin:auto; text-align: center;">
+		<div class="temp-box" style="padding-top:20px;">
+		<h3 style="text-align:left;">서비스 소개</h3>
+		<img src="유스케이스 다이어그램.png" alt="usecase diagram">
+		</div>
+	</div>
+	</main>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=500">
+	<title>사고 과실 비율 분석</title>
+</head>
+<body>
+{% block body %}
+	<div class="content" style="text-align:center;">
+	<h2>{{file_name}}</h2>{{user_id}}
+	<h3 style="padding-top:100px; ">결과를 확인하시겠습니까??</h3>
+	<button type="button" onclick="window.location.href='{{url_for( 'result' , file_name=file_name, user_id=user_id)}}';">Yes</button>
+	</div>
+{% endblock %}
+</body>
+</html>
