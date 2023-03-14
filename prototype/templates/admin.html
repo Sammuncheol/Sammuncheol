@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=600px">
+	<title>사고 과실 비율 분석</title>
+</head>
+<body>
+	<header style="width:60%; margin:auto; background-color: green;">
+	<nav style="font-size:20pt; font-weight:bold; ">
+	<ul style="list-style:none;">
+		<li style="float:left;">
+		<a href='/' style="padding-right:400px">사고 과실 비율 분석 AI</a>
+		<a href='/submit' style="padding-right:80px">영상 제출</a>
+		<a href='/info'>회원 정보</a>
+		</li>
+	</ul>
+	</nav>
+	</header>
+	<main>
+	<div style="width:55%; margin:auto; padding-top:60px">
+        <div style="background-color:grey; text-align:center;">
+			<br><h2> 관리자페이지입니다.</h2>
+			<hr width="80%" align="center" size="2px" color="black"/><br>
+			<form method="POST" action="/admin_delete" enctype="multipart/form-data">
+            {% for uid, video_info in all_information %}
+                <h3>{{uid}}</h3>
+                {%if video_info == [[], [], [], []]%}
+                    nothing<br>
+                {%else%}
+                    {% for i in range(video_info[0]|length)%}
+                        {% for j in range(video_info|length)%}
+                            {% if j == 0 %}
+								{{video_info[j][i]}}<br>
+								<input type="checkbox" name="deletecheck" value="file_name={{video_info[j][i]}}, uid={{uid}}"> <br>
+                            {% else %}
+								{% if j == 1 %}
+									<img src={{ video_info[j][i] }} style="max-width: 256px"> <br>
+								{% else %}
+                                	{{video_info[j][i]}}<br>
+								{% endif %}
+                            {% endif %}
+                        {% endfor %}
+						<hr width="50%" align="center" size="1px" />
+                    {% endfor %}
+                {% endif %}
+				<hr width="80%" align="center" size="1px" color="black"/>
+            {% endfor %}
+			<input type="submit" value="삭제"><br><br>
+			</form>
+        </div>
+	</div>
+	</main>
+</body>
+</html>

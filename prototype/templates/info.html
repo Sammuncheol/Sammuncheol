@@ -1,0 +1,47 @@
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		<script>alert("{{messages[-1]}}")</script>
+	{%endif%}
+{%endwith%}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=600px">
+	<title>사고 과실 비율 분석</title>
+</head>
+<body>
+	<header style="width:60%; margin:auto; background-color: green;">
+	<nav style="font-size:20pt; font-weight:bold; ">
+	<ul style="list-style:none;">
+		<li style="float:left;">
+		<a href='/' style="padding-right:400px">사고 과실 비율 분석 AI</a>
+		<a href='/submit' style="padding-right:80px">영상 제출</a>
+		<a href='/info'>회원 정보</a>
+		</li>
+	</ul>
+	</nav>
+	</header>
+	<main>
+	<div style="width:55%; margin:auto; padding-top: 60px;">
+		<div class="temp-box" style="background-color:gray; text-align: center;">
+		<h3 style="text-align:left;">  회원 정보  </h3><br>
+		<h3 style="display:inline">{{uid}}</h3>님의 회원정보입니다.
+		<br><hr width="80%" align="center" size="3px" color="black" /><br><br>
+			<div>
+			<form method="POST" action="/delete" enctype="multipart/form-data">
+			{% for content in contents %}
+			<h3>{{content[0]}}</h3> 
+			<img src={{ content[1] }} style="max-width: 256px"> <br>
+			{{content[3]}} <br>{{content[2]}}<br><input type="checkbox" name="deletecheck" value="{{content[0]}}"> <br>
+			<hr width="50%" align="center" size="1px" />
+			{% endfor %}
+			<br><br><br>
+			<input type="submit" value="삭제"><br><br>
+			</form>
+			</div>
+		</div>
+	</div>
+	</main>
+</body>

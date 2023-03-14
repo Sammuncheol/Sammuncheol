@@ -1,0 +1,37 @@
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		<script>alert("{{messages[-1]}}")</script>
+	{%endif%}
+{%endwith%}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=600px">
+	<title>사고 과실 비율 분석</title>
+</head>
+<body>
+	<header style="width:60%; margin:auto; background-color: green;">
+	<nav style="font-size:20pt; font-weight:bold; ">
+	<ul style="list-style:none;">
+		<li style="float:left;">
+		<a href='/' style="padding-right:400px">사고 과실 비율 분석 AI</a>
+		<a href='/submit' style="padding-right:80px">영상 제출</a>
+		<a href='/info'>회원 정보</a>
+		</li>
+	</ul>
+	</nav>
+	</header>
+	<main>
+	<div style="width:55%; margin:auto; padding-top: 60px;">
+		<div class="temp-box" style="background-color:gray; text-align: center;">
+		<h3 style="text-align:left;">영상 제출</h3>
+		<form method="POST" action="/upload" enctype="multipart/form-data">
+		<br><br><br><br><input type="file" name="file"><br><br><br><br><br><br>
+		<input type="submit" value="Upload">
+		</form><br><br>
+		</div>
+	</div>
+	</main>
+</body>

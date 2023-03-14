@@ -1,0 +1,40 @@
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		<script>alert("{{messages[-1]}}")</script>
+	{%endif%}
+{%endwith%}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=600px">
+	<title>회원가입</title>
+</head>
+<body>
+	<header style="width:60%; margin:auto; background-color: green;">
+	<nav style="font-size:20pt; font-weight:bold; ">
+	<ul style="list-style:none;">
+		<li style="float:left;">
+		<a href='/' style="padding-right:400px">사고 과실 비율 분석 AI</a>
+		<a href='/submit' style="padding-right:80px">영상 제출</a>
+		<a href='/info'>회원 정보</a>
+		</li>
+	</ul>
+	</nav>
+	</header>
+	<main>
+	<br><br><br><h3 style="text-align:center;">회원가입</h3>
+	<div style="text-align:center;>
+		<div style="text-align:center; background-color:grey;"><br><br>
+		<form method="POST" action="/register" enctype="multipart/form-data">
+		아이디 <input type="text" name="id"><br><br>
+		비밀번호 <input type="password" name="pw"><br><br>
+		비밀번호 확인 <input type="password" name="pwcheck"><br><br>
+		<input type="submit" value="회원가입">
+		</form>
+		</div>
+	</div>
+	</main>
+</body>
+</html>
