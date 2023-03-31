@@ -1,0 +1,49 @@
+<!-- {% with messages = get_flashed_messages() %}
+	{% if messages %}
+		<script>alert("{{messages[-1]}}")</script>
+	{%endif%}
+{%endwith%} -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI문철</title>
+    <link rel="stylesheet" href="style_submit.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="intro_bg">
+            <div class="header">
+                <h1><a href="main.html">AI문철</a></h1>
+                <div class="nav">
+                    <ul>
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="submit.html">영상업로드</a></li>
+                        <li><a href="info.html">마이페이지</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main_text0">
+          <div class="container-submit">
+            <div class="content" style="text-align:center;">
+              <header>영상 업로드</header>
+              <div class="temp-box">
+                <form method="POST" action="/upload" enctype="multipart/form-data">
+                  <br><br><br><br><input type="file" name="file"><br><br><br><br><br><br>
+                  
+                  </form><br><br>
+              </div>
+              <input type="submit" value="Upload">
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
+
