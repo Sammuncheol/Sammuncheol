@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI문철</title>
+    <link rel="stylesheet" href="style_info.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="intro_bg">
+            <div class="header">
+                <h1><a href="main.html">AI문철</a></h1>
+                <div class="nav">
+                    <ul>
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="submit.html">영상업로드</a></li>
+                        <li><a href="info.html">마이페이지</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      <div class="main_text0">
+        <div class="container-info">
+          <div class="content" style="text-align:center;">
+            <header>회원 정보</header>
+            <div class="temp-box">
+              <br><h3 style="display:inline; padding-top: 50px;">{{uid}}</h3>님의 회원정보입니다.
+    
+              <br><hr style="width: 80%; size: 3px; color: black; margin: auto;" /><br>
+                <div>
+                <form method="POST" action="/delete" enctype="multipart/form-data">
+                {% for content in contents %}
+                <h3>{{content[0]}}</h3> 
+                <img src="{{ content[1] }}" style="max-width: 256px"> 
+                <br>{{content[3]}} <br>{{content[2]}}<br>
+                <input type="checkbox" name="deletecheck" value="{{content[0]}}"> <br>
+                <br>
+                </form>
+                </div>
+            </div>
+            <input type="submit" value="삭제">
+          </div>
+       
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
